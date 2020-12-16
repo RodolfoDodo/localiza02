@@ -1,20 +1,14 @@
 package br.localiza.app.steps;
 
-import br.localiza.app.page.ConfigurarPage;
 import br.localiza.app.page.LoginPage;
-import br.localiza.app.page.PlacaPage;
-import br.localiza.app.page.Sidebar;
 import io.cucumber.java.en.Given;
 
 public class AbastercerSteps {
 
-	private ConfigurarPage configurar = new ConfigurarPage();
 	
 	private LoginPage login = new LoginPage();
 	
-	private Sidebar sidebar = new Sidebar();
-	
-	private PlacaPage placa = new PlacaPage();
+
 
 
 	
