@@ -30,6 +30,7 @@ public class DriverFactory {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		//desiredCapabilities.setCapability("app","C:\\Users\\195869\\eclipse-workspace\\CompletaeTest\\APK\\Combustivel-v2.0.2(202)-debug.apk");
 		desiredCapabilities.setCapability("app",app.getAbsolutePath());
+		
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("appPackage", "com.localiza.combustivelapp");
 		desiredCapabilities.setCapability("appActivity", "com.localiza.combustivelapp.ui.main.MainActivity");
@@ -52,12 +53,12 @@ public class DriverFactory {
 	}
 	private static void createDriver() {
 		
-		//String apkpath="APK/Menu-hmg-v2.1.6(216)-debug.apk";
-		//File app=new File(apkpath);
+		String apkpath="APK/Menu-hmg-v2.1.6(216)-debug.apk";
+		File app=new File(apkpath);
 		
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("app","C:\\Users\\195869\\eclipse-workspace\\CompletaeTest\\APK\\Menu-hmg-v2.1.6(216)-debug.apk");
-		//desiredCapabilities.setCapability("app",app.getAbsolutePath());
+		//desiredCapabilities.setCapability("app","C:\\Users\\195869\\eclipse-workspace\\CompletaeTest\\APK\\Combustivel-v2.0.2(202)-debug.apk");
+		desiredCapabilities.setCapability("app",app.getAbsolutePath());
 
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("appPackage", "com.localiza.menuapp");
