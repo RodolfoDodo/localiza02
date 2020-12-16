@@ -20,11 +20,9 @@ public class AbastercerSteps {
 	
 	@Given("que realizo a pesquisar de uma placa {string}")
 	public void queRealizoAPesquisarDeUmaPlaca(String placapesquisa) {
-		configurar.configracaoApp();
+		
 	    login.with("110508", "3487");
-		sidebar.menuCombustivel();
-		placa.pesquisarPlaca(placapesquisa);
-		placa.btnBuscar();
+		
 	}
 	
 	
