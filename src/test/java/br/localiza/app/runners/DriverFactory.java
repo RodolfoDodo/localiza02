@@ -47,7 +47,7 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		driver.quit();
 
 	}
@@ -64,7 +64,7 @@ public class DriverFactory {
 		desiredCapabilities.setCapability("appPackage", "com.localiza.menuapp");
 		desiredCapabilities.setCapability("appActivity", "com.localiza.menuapp.ui.main.MainActivity");
 		desiredCapabilities.setCapability("deviceName", "Nexus One");
-		//desiredCapabilities.setCapability("platformVersion", "7");
+	    //desiredCapabilities.setCapability("platformVersion", "7");
 		desiredCapabilities.setCapability("platformVersion", "10");
 		//desiredCapabilities.setCapability("deviceName", "	 API 29");
 		//desiredCapabilities.setCapability("platformVersion", "7");
@@ -78,7 +78,7 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
 	}
 
