@@ -16,6 +16,7 @@ public class AbastercerSteps {
 	public void queRealizoAPesquisarDeUmaPlaca(String placapesquisa) {
 		
 	    login.with("110508", "3487");
+	    login.gerarScreenShot();
 		
 	}
 	
