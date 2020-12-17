@@ -27,6 +27,12 @@ public class LoginPage {
 
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoSalvar").click();
 		
+		
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_matricula").sendKeys(matricula);
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_senha").sendKeys(senha);
+
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_login").click();
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
 	}
 
 	public String  loginInvalido() {
