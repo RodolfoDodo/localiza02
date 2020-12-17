@@ -59,7 +59,6 @@ public class DriverFactory {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		//desiredCapabilities.setCapability("app","C:\\Users\\195869\\eclipse-workspace\\CompletaeTest\\APK\\Combustivel-v2.0.2(202)-debug.apk");
 		desiredCapabilities.setCapability("app",app.getAbsolutePath());
-
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("appPackage", "com.localiza.menuapp");
 		desiredCapabilities.setCapability("appActivity", "com.localiza.menuapp.ui.main.MainActivity");
