@@ -3,7 +3,7 @@ trigger:
   - main
 
 pool:
-  vmImage: 'macOS-latest'
+  vmImage: 'windows-latest'
 
 jobs:
 - job: sonar
