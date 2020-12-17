@@ -19,7 +19,13 @@ public class LoginPage {
 
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_patrimonio").sendKeys("teste");
 
-		
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/layout_input_agencia").click();
+
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_agencia").sendKeys("aabhz");
+
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/layout_configuracoes").click();
+
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoSalvar").click();
 		
 	}
 
