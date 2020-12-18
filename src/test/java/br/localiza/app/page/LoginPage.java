@@ -27,8 +27,7 @@ public class LoginPage {
 
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/btn_continuar").click();
 
-		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/layout_input_patrimonio").click();
-
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_patrimonio").sendKeys("teste");
 
 		
 	}
