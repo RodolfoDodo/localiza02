@@ -1,6 +1,7 @@
 package br.localiza.app.steps;
 
 import br.localiza.app.page.LoginPage;
+import br.localiza.app.runners.DriverFactory;
 import io.cucumber.java.en.Given;
 
 public class AbastercerSteps {
@@ -17,6 +18,8 @@ public class AbastercerSteps {
 		
 	    login.with("110508", "3487");
 	    login.gerarScreenShot();
+	    
+	 
 		
 	}
 	
