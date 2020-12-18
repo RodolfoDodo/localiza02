@@ -48,7 +48,7 @@ public class DriverFactory {
 		}
 		
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		
+		driver.quit();
 
 	}
 	private static void createDriver() {
@@ -68,7 +68,8 @@ public class DriverFactory {
 		//desiredCapabilities.setCapability("deviceName", "	 API 29");
 		//desiredCapabilities.setCapability("platformVersion", "7");
 		desiredCapabilities.setCapability("autoGrantPermissions", true);
-		desiredCapabilities.setCapability("ensureWebviewsHavePages", true);
+		
+		
 		
 		try {
 			driver = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
