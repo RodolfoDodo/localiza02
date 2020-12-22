@@ -10,6 +10,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import br.localiza.app.runners.DriverFactory;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class LoginPage {
 	
@@ -19,7 +21,7 @@ public class LoginPage {
 	public void with(String matricula, String senha) {
 		
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_matricula").sendKeys(matricula);
-		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_senha").sendKeys(senha);
+		
 		
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_configuracoes").click();
 
@@ -38,19 +40,20 @@ public class LoginPage {
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoSalvar").click();
 
 	
-		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_login").click();
-		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
+		//DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_login").click();
+		
+		
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_senha").sendKeys(senha);
 		
 	}
 
-	public static void gerarScreenShot() {
+	
+	public void tapLogin(int x, int y) {
+		new TouchAction<>(DriverFactory.getDriver()).tap(PointOption.point(x, y)).perform();
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
 
-		try {
-			File imagem = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(imagem, new File("surefire-reports" + testName.getMethodName() + ".png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
+
+	
+
 }
