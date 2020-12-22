@@ -33,14 +33,11 @@ public class LoginPage {
 
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoSalvar").click();
 
-	
-		//DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_login").click();
-		
-		
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_senha").sendKeys(senha);
 		
-		tapLogin(505, 1576);
+		//tapLogin(505, 1576);
 		
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_login").click();
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
 
 	}
