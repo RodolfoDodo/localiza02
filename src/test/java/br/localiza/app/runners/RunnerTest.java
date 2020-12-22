@@ -1,6 +1,8 @@
 package br.localiza.app.runners;
 
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
@@ -19,4 +21,16 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				strict = true)
 public class RunnerTest {
 
+	
+	@After
+	public void tearDown() {
+		//gerarScreenShot();
+		// DriverFactory.killDriver();
+		DriverFactory.getDriver().resetApp();
+	}
+
+	@AfterClass
+	public static void fecharClasse() {
+		DriverFactory.killDriver();
+	}
 }
