@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 import br.localiza.app.page.LoginPage;
 import br.localiza.app.page.Sidebar;
-import br.localiza.app.runners.DriverFactory;
+
 import io.cucumber.java.en.Given;
 
 public class AbastercerSteps {
@@ -20,7 +20,7 @@ public class AbastercerSteps {
 	public void queRealizoAPesquisarDeUmaPlaca(String placapesquisa) {
 		
 	    login.with("110508", "3487");
-	    login.tapLogin(505, 1576);
+	   //login.tapLogin(505, 1576);
 	    Assert.assertEquals("ANDRE", sidebar.usuario());
 	    
 		

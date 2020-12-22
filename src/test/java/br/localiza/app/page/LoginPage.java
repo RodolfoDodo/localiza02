@@ -1,13 +1,7 @@
 package br.localiza.app.page;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 import org.junit.Rule;
 import org.junit.rules.TestName;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
 import br.localiza.app.runners.DriverFactory;
 import io.appium.java_client.TouchAction;
@@ -45,12 +39,15 @@ public class LoginPage {
 		
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/input_senha").sendKeys(senha);
 		
+		tapLogin(505, 1576);
+		
+		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
+
 	}
 
 	
 	public void tapLogin(int x, int y) {
 		new TouchAction<>(DriverFactory.getDriver()).tap(PointOption.point(x, y)).perform();
-		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoPositivo").click();
 
 	}
 
