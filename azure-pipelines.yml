@@ -22,7 +22,11 @@ jobs:
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       goals: 'clean'
 
-
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '8'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 
 - job: tests
   displayName: Run tests
