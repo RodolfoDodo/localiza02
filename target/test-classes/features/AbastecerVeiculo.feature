@@ -5,9 +5,11 @@ Feature: Abastecer um determinado veiculo de uma agencia
  	
  
 	
- 	Scenario Outline: Abastercer com Gasolina
- 		Given que realizo a pesquisar de uma placa "<placa>"
  	
-	Examples:
-		| placa   |
-		| QWU6260 |
+		
+	Scenario: Abastecer veiculo combustivel Etanol Forncedor Interno
+		Given que realizo a pesquisar de uma placa "QWU6260"
+ 		And solicito o abastecimento do veiculo
+ 		And informo o tipo de combustivel e quantidade de litros
+ 		When confirmo o abastecimento
+ 		
