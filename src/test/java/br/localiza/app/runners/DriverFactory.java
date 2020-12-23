@@ -34,8 +34,8 @@ public class DriverFactory {
 		desiredCapabilities.setCapability("appPackage", "com.localiza.combustivelapp");
 		desiredCapabilities.setCapability("appActivity", "com.localiza.combustivelapp.ui.main.MainActivity");
 		desiredCapabilities.setCapability("deviceName", "Nexus 6");
-		desiredCapabilities.setCapability("platformVersion", "7");
-		//desiredCapabilities.setCapability("platformVersion", "10");
+		//desiredCapabilities.setCapability("platformVersion", "7");
+		desiredCapabilities.setCapability("platformVersion", "10");
 		desiredCapabilities.setCapability("autoGrantPermissions", true);
 		desiredCapabilities.setCapability("ensureWebviewsHavePages", true);
 		
@@ -62,8 +62,8 @@ public class DriverFactory {
 		desiredCapabilities.setCapability("appPackage", "com.localiza.menuapp");
 		desiredCapabilities.setCapability("appActivity", "com.localiza.menuapp.ui.main.MainActivity");
 		desiredCapabilities.setCapability("deviceName", "Nexus 6");
-	    desiredCapabilities.setCapability("platformVersion", "7");
-		//desiredCapabilities.setCapability("platformVersion", "10");
+	    //desiredCapabilities.setCapability("platformVersion", "7");
+		desiredCapabilities.setCapability("platformVersion", "10");
 		//desiredCapabilities.setCapability("deviceName", "	 API 29");
 		//desiredCapabilities.setCapability("platformVersion", "7");
 		desiredCapabilities.setCapability("autoGrantPermissions", true);
