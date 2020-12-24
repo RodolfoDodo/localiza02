@@ -21,11 +21,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				strict = true)
 public class RunnerTest {
 
-	
 	@After
 	public void tearDown() {
 		//gerarScreenShot();
-		// DriverFactory.killDriver();
+		DriverFactory.killDriver();
 		DriverFactory.getDriver().resetApp();
 	}
 

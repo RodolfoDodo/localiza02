@@ -1,8 +1,30 @@
-package br.localiza.app.page;
+package br.localiza.app.runners;
 
-import br.localiza.app.runners.DriverFactory;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 
-public class ConfigurarPage {
+import org.apache.commons.io.FileUtils;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.TestName;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+public class BaseTest {
+
+	@Rule
+	public TestName testName = new TestName();
+
+	@Before
+	public void iniciarAppium() throws MalformedURLException {
+		DriverFactory.getDriver();
+
+		configracaoApp();
+	
+	}
 
 	public void configracaoApp() {
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botao_configuracoes").click();
@@ -27,6 +49,17 @@ public class ConfigurarPage {
 
 		DriverFactory.getDriver().findElementById("com.localiza.menuapp:id/botaoSalvar").click();
 	}
+
 	
-	
+
+	public void gerarScreenShot() {
+
+		try {
+			File imagem = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(imagem, new File("target/screenshot/" + testName.getMethodName() + ".png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
